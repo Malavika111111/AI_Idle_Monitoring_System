@@ -96,7 +96,7 @@ while True:
     if not ret:
         break
 
-    # 1. ONLY detect 'person' - Class 0 in YOLO COCO dataset
+    # ONLY detect 'person' - Class 0 in YOLO COCO dataset
     results = model(frame, classes=[0], conf=0.5) 
 
     for r in results:
@@ -108,7 +108,7 @@ while True:
             if person_crop.size == 0:
                 continue
 
-            # 2. Find faces ONLY within the person crop
+            # Find faces ONLY within the person crop
             rgb_crop = cv2.cvtColor(person_crop, cv2.COLOR_BGR2RGB)
             face_locations = face_recognition.face_locations(rgb_crop)
             face_encodings = face_recognition.face_encodings(rgb_crop, face_locations)
