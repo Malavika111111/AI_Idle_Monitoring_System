@@ -1,5 +1,4 @@
 # ========================= DATABASE CONFIG =========================
-# Edit only this file to change your PostgreSQL connection settings.
 
 DB_HOST     = "pg-22d5507b-malavikasuresh863-dd36.h.aivencloud.com"
 DB_NAME     = "sample"
