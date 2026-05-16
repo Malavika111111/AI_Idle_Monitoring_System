@@ -15,7 +15,7 @@ def init_db():
     try:
         conn = psycopg2.connect(**DB_PARAMS)
         cur = conn.cursor()
-        # Updated table schema to use image_path (TEXT) instead of image_data (BYTEA)
+
         cur.execute("""
             CREATE TABLE IF NOT EXISTS inactivity_log (
                 id SERIAL PRIMARY KEY,
